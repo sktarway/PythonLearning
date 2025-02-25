@@ -59,18 +59,23 @@ Variables & Values in Python
 
 6. Types of Values That Can Be Assigned to Variables
         Python supports different types of values, including:
+        -----------------------------------------------------------------------------
+        |    Data Type	    |     Example	    |                Description         |
+        -----------------------------------------------------------------------------
+            Integer (int)	       x = 10	                        Whole numbers
+            Float (float)	       pi = 3.14	                    Decimal numbers
+            String (str)	       name = "John"	                Textual data
+            Boolean (bool)	       is_active = True	                True or False
+            List (list)	           fruits = ["apple", "banana"]	    Ordered, mutable collection
+            Tuple (tuple)	       coordinates = (4, 5)	Ordered,    immutable collection
+            Dictionary (dict)	   person = {"name": "Alice", 
+                                    "age": 25}	                    Key-value pairs
+            Set (set)	           unique_numbers = {1, 2, 3}	    Unordered unique elements
+            
         
-        Data Type	Example	Description
-        Integer (int)	x = 10	Whole numbers
-        Float (float)	pi = 3.14	Decimal numbers
-        String (str)	name = "John"	Textual data
-        Boolean (bool)	is_active = True	True or False
-        List (list)	fruits = ["apple", "banana"]	Ordered, mutable collection
-        Tuple (tuple)	coordinates = (4, 5)	Ordered, immutable collection
-        Dictionary (dict)	person = {"name": "Alice", "age": 25}	Key-value pairs
-        Set (set)	unique_numbers = {1, 2, 3}	Unordered unique elements
-            Examples:
+        Examples:
             # Different types of values
+
             age = 30           # Integer
             price = 99.99      # Float
             greeting = "Hello" # String

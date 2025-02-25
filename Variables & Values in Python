@@ -1,115 +1,97 @@
 Variables & Values in Python
+--------------------------------
+
 1. Introduction to Variables
-A variable in Python is a symbolic name that refers to a value stored in memory. Unlike some other languages, Python does not require explicit declaration of variable types.
+    A variable in Python is a symbolic name that refers to a value stored in memory. Unlike some other languages, Python does not require explicit declaration of variable types.
 
-Key Characteristics of Variables in Python
-Variables do not need explicit declaration before use.
-Variables are dynamically typed, meaning the type is inferred at runtime.
-Python is case-sensitive (myVar and myvar are different variables).
-Variables can store different types of values, including numbers, text, lists, and more.
-2. Assigning Values to Variables
-In Python, the assignment operator (=) is used to assign values to variables.
+2. Key Characteristics of Variables in Python
+    Variables do not need explicit declaration before use.
+    Variables are dynamically typed, meaning the type is inferred at runtime.
+    Python is case-sensitive (myVar and myvar are different variables).
+    Variables can store different values, including numbers, text, lists, and more.
 
-Example:
-python
-Copy
-Edit
-x = 10       # Assigning an integer value
-y = 3.14     # Assigning a floating-point value
-name = "Sushant"  # Assigning a string value
-is_active = True  # Assigning a boolean value
-3. Rules for Naming Variables
-To ensure good programming practices, follow these rules:
+3. Assigning Values to Variables
+    In Python, the assignment operator (=) is used to assign values to variables.
 
-✅ Allowed:
+    Example:
+      x = 10       # Assigning an integer value
+      y = 3.14     # Assigning a floating-point value
+      name = "Sushant"  # Assigning a string value
+      is_active = True  # Assigning a boolean value
 
-Can contain letters (a-z, A-Z), digits (0-9), and underscores (_).
-Must start with a letter or an underscore, not a number.
-Can have both uppercase and lowercase letters (but case-sensitive).
-Can be of any length but should be meaningful.
-❌ Not Allowed:
+4. Rules for Naming Variables
+    To ensure good programming practices, follow these rules:
 
-Cannot start with a digit (1variable ❌).
-Cannot use special characters like @, #, $, %, etc.
-Cannot use Python reserved keywords like class, if, else, def, for, etc.
-Examples:
-python
-Copy
-Edit
-my_var = 5   # ✅ Valid
-_variable = 10  # ✅ Valid (but discouraged unless for internal use)
-myVar = "Python"  # ✅ Valid (case-sensitive)
-1st_var = 25  # ❌ Invalid (cannot start with a number)
-class = "CS101"  # ❌ Invalid (reserved keyword)
-4. Good Programming Practices for Using Variables
-To write clean and maintainable code, follow these best practices:
+    ✅ Allowed:
+          Can contain letters (a-z, A-Z), digits (0-9), and underscores (_).
+          Must start with a letter or an underscore, not a number.
+          Can have both uppercase and lowercase letters (but case-sensitive).
+          Can be of any length but should be meaningful
 
-Use Descriptive Variable Names
-❌ x = 10 (not clear)
-✅ customer_age = 10 (clear & readable)
+    ❌ Not Allowed:
+          Cannot start with a digit (1variable ❌).
+          Cannot use special characters like @, #, $, %, etc.
+          Cannot use Python reserved keywords like class, if, else, def, for, etc.
+            Examples:
+              my_var = 5   # ✅ Valid
+              _variable = 10  # ✅ Valid (but discouraged unless for internal use)
+              myVar = "Python"  # ✅ Valid (case-sensitive)
+              1st_var = 25  # ❌ Invalid (cannot start with a number)
+              class = "CS101"  # ❌ Invalid (reserved keyword)
 
-Follow Naming Conventions
+5. Good Programming Practices for Using Variables
+      To write clean and maintainable code, follow these best practices:
+      Use Descriptive Variable Names
+          ❌ x = 10 (not clear)
+          ✅ customer_age = 10 (clear & readable)
+      Follow Naming Conventions
+        Use snake_case (first_name, total_price).
+        Avoid single-character names, unless in loops (i, j, etc.).
+        Use Constants for Fixed Values
+        Define constants in UPPER_CASE (e.g., PI = 3.14159).
+        Avoid Using Global Variables
+        Keep variables local within functions where possible.
+        Avoid Unused Variables
+        If a variable is unused, prefix it with _ (e.g., _temp_var).
+        Assign Values Immediately
+        Prevent undefined variables:
+            count = 0  # Good practice
 
-Use snake_case (first_name, total_price).
-Avoid single-character names, unless in loops (i, j, etc.).
-Use Constants for Fixed Values
+6. Types of Values That Can Be Assigned to Variables
+        Python supports different types of values, including:
+        
+        Data Type	Example	Description
+        Integer (int)	x = 10	Whole numbers
+        Float (float)	pi = 3.14	Decimal numbers
+        String (str)	name = "John"	Textual data
+        Boolean (bool)	is_active = True	True or False
+        List (list)	fruits = ["apple", "banana"]	Ordered, mutable collection
+        Tuple (tuple)	coordinates = (4, 5)	Ordered, immutable collection
+        Dictionary (dict)	person = {"name": "Alice", "age": 25}	Key-value pairs
+        Set (set)	unique_numbers = {1, 2, 3}	Unordered unique elements
+            Examples:
+            # Different types of values
+            age = 30           # Integer
+            price = 99.99      # Float
+            greeting = "Hello" # String
+            is_valid = False   # Boolean
+            colors = ["red", "blue", "green"] # List
+            coordinates = (10, 20) # Tuple
+            person = {"name": "John", "age": 25} # Dictionary
+            unique_values = {1, 2, 3, 4} # Set
 
-Define constants in UPPER_CASE (e.g., PI = 3.14159).
-Avoid Using Global Variables
+7. Type Checking & Type Conversion
+        Python allows checking the type of a variable using type() and converting between types when necessary.
+        
+        Checking Type
+        x = 10
+        print(type(x))  # Output: <class 'int'>
+        Converting Types
+        num = "100"
+        converted_num = int(num)  # Converts string to integer
+        print(type(converted_num))  # Output: <class 'int'>
 
-Keep variables local within functions where possible.
-Avoid Unused Variables
-
-If a variable is unused, prefix it with _ (e.g., _temp_var).
-Assign Values Immediately
-
-Prevent undefined variables:
-python
-Copy
-Edit
-count = 0  # Good practice
-5. Types of Values That Can Be Assigned to Variables
-Python supports different types of values, including:
-
-Data Type	Example	Description
-Integer (int)	x = 10	Whole numbers
-Float (float)	pi = 3.14	Decimal numbers
-String (str)	name = "John"	Textual data
-Boolean (bool)	is_active = True	True or False
-List (list)	fruits = ["apple", "banana"]	Ordered, mutable collection
-Tuple (tuple)	coordinates = (4, 5)	Ordered, immutable collection
-Dictionary (dict)	person = {"name": "Alice", "age": 25}	Key-value pairs
-Set (set)	unique_numbers = {1, 2, 3}	Unordered unique elements
-Examples:
-python
-Copy
-Edit
-# Different types of values
-age = 30           # Integer
-price = 99.99      # Float
-greeting = "Hello" # String
-is_valid = False   # Boolean
-colors = ["red", "blue", "green"] # List
-coordinates = (10, 20) # Tuple
-person = {"name": "John", "age": 25} # Dictionary
-unique_values = {1, 2, 3, 4} # Set
-6. Type Checking & Type Conversion
-Python allows checking the type of a variable using type() and converting between types when necessary.
-
-Checking Type
-python
-Copy
-Edit
-x = 10
-print(type(x))  # Output: <class 'int'>
-Converting Types
-python
-Copy
-Edit
-num = "100"
-converted_num = int(num)  # Converts string to integer
-print(type(converted_num))  # Output: <class 'int'>
-7. Summary
+8. Summary
 ✅ Python variables are dynamically typed and case-sensitive.
 ✅ Follow naming rules: start with a letter/underscore, avoid special characters, and use descriptive names.
 ✅ Use good programming practices: meaningful names, proper casing, and avoid unnecessary global variables.
